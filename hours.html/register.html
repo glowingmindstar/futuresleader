@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enroll Now - Glowing Mind</title>
+<style>
+  *{margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif;}
+  body{background:#111; color:white; text-align:center; padding:30px 20px;}
+  h1{color:#FFD700; font-size:36px; margin-bottom:10px;}
+  p{color:#ddd; font-size:18px; margin-bottom:25px;}
+  form{max-width:520px; margin:0 auto; text-align:left;}
+  label{display:block; color:#FFD700; font-weight:bold; margin:15px 0 6px; font-size:17px;}
+  input, select{width:100%; padding:14px; border-radius:8px; border:none; font-size:17px; background:white; color:black;}
+  button{width:100%; margin-top:25px; background:#FFD700; color:black; font-weight:bold; font-size:19px; padding:16px; border:none; border-radius:8px; cursor:pointer;}
+  a{display:inline-block; margin-top:20px; color:#FFD700; text-decoration:none;}
+</style>
+</head>
+<body>
+
+<h1>Enroll Now</h1>
+<p>"Please complete the form below. and our team Will contact you shortly with the next steps for admission Thank you." </p>
+
+<form id="enrollForm">
+  <label>Full Name</label>
+  <input type="text" id="name" placeholder="Enter student name" required>
+
+  <label>Age</label>
+  <input type="number" id="age" placeholder="Enter age" required>
+
+  <label>Gender</label>
+  <select id="gender">
+    <option>Male</option>
+    <option>Female</option>
+  </select>
+
+  <label>Class</label>
+  <select id="class">
+    <option>Nursery</option>
+    <option>Primary 1</option>
+    <option>Primary 2</option>
+    <option>Primary 3</option>
+    <option>Primary 4</option>
+    <option>Primary 5</option>
+    <option>Primary 6</option>
+  </select>
+
+  <label>Course</label>
+  <select id="course">
+    <option>Quran</option>
+    <option>Arabic</option>
+    <option>Education</option>
+    <option>Moral Values</option>
+  </select>
+
+  <label>Parent/Guardian Phone Number</label>
+  <input type="text" id="parent" placeholder="Enter parent phone" required>
+
+  <button type="submit">Enroll Now</button>
+</form>
+
+<a href="index.html">← Back to Homepage</a>
+
+<script>
+document.getElementById("enrollForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  var name = document.getElementById("name").value;
+  var age = document.getElementById("age").value;
+  var gender = document.getElementById("gender").value;
+  var clas = document.getElementById("class").value;
+  var course = document.getElementById("course").value;
+  var parent = document.getElementById("parent").value;
+
+  var message = "Hello Glowing Mind, I want to enroll.%0A%0AName: " + name + "%0AAge: " + age + "%0AGender: " + gender + "%0AClass: " + clas + "%0ACourse: " + course + "%0AParent Phone: " + parent;
+
+  window.location.href = "https://wa.me/2349130625347?text=" + message;
+});
+</script>
+
+</body>
+</html>
